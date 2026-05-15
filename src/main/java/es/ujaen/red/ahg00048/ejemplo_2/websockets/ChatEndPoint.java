@@ -12,6 +12,7 @@ import java.util.logging.Logger;
 
 @ServerEndpoint("/chat")
 public class ChatEndPoint {
+    private static int curr_id = 0;
     private static final int MAX_MESSAGES = 30;
     private static final ConcurrentLinkedDeque<String> _messages = new ConcurrentLinkedDeque<>();
 
